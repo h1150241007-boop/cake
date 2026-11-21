@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 甜品蛋糕評價大賞 | 台灣四大名店深度評比指南</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-paper: #F7F5F2;
+      --choco-dark: #2C1810;
+      --choco-mid: #4A2C2A;
+      --terracotta: #A83E28;
+      --ink-black: #0B0B0B;
+      --ink-gray: #7D7D7D;
+      --store-cream: #FBF8F3;
+      --store-brown: #6B4423;
+      --store-orange: #EB8323;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', 'Inter', sans-serif;
+      background-color: var(--bg-paper);
+      color: var(--ink-black);
+      /* 烘焙麵包線條無縫插畫底紋，貫徹模板視覺基因 */
+      background-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23E3DFD8' stroke-width='1.35' stroke-linecap='round' stroke-linejoin='round'%3E%3C!-- Croissant --%3E%3Cpath d='M25 42c6-12 24-12 30 0 4 8-2 16-8 14-4-1-4-7-7-7s-3 6-7 7c-6 2-12-6-8-14z'/%3E%3Cpath d='M33 35c2 5 2 11 0 16M47 35c-2 5-2 11 0 16'/%3E%3C!-- Toast Slice --%3E%3Cpath d='M110 25h24c6 0 10 5 9 10l-2 4v20c0 3-2 5-5 5h-28c-3 0-5-2-5-5V39l-2-4c-1-5 3-10 9-10z'/%3E%3Cpath d='M113 33h18'/%3E%3C!-- Pretzel --%3E%3Cpath d='M35 125c-9-9-2-22 10-16 6 3 9 10 15 16 6-6 9-13 15-16 12-6 19 7 10 16-7 7-17 11-25 14-8-3-18-7-25-14z'/%3E%3Ccircle cx='47' cy='117' r='3'/%3E%3Ccircle cx='73' cy='117' r='3'/%3E%3C!-- Baguette --%3E%3Crect x='115' y='112' width='48' height='18' rx='9' transform='rotate(-28 139 121)'/%3E%3Cpath d='M127 123l5 6M136 118l5 6M145 113l5 6'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .font-serif-store {
+      font-family: 'Noto Serif TC', 'DFKai-SB', 'BiauKai', serif;
+    }
+
+    .hero-year {
+      color: var(--terracotta);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-main-title {
+      color: var(--ink-black);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-en-sub {
+      color: var(--ink-gray);
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.14em;
+    }
+
+    .choco-shadow {
+      box-shadow: 0 16px 36px -12px rgba(44, 24, 16, 0.16);
+    }
+
+    /* 店家資訊參考圖卡片樣式 */
+    .store-card-bg {
+      background-color: var(--store-cream);
+      border: 1px solid #EAE2D6;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-[#A83E28] selection:text-white">
+
+  <!-- 頂部簡約導覽列 -->
+  <header class="sticky top-0 z-40 bg-[#F7F5F2]/90 backdrop-blur-md border-b border-[#E5DFD6]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2.5">
+        <span class="w-8 h-8 rounded-lg bg-[#2C1810] text-white flex items-center justify-center font-bold text-sm">cake</span>
+        <span class="font-black text-base sm:text-lg tracking-tight text-[#0B0B0B]">甜品蛋糕評價大賞</span>
+        <span class="hidden sm:inline-block text-xs font-semibold text-[#A83E28] border border-[#A83E28]/30 px-2 py-0.5 rounded-full">2026 特輯</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-bold text-[#4A2C2A]">
+        <a href="#cake-browser" class="hover:text-[#A83E28] transition">甜點瀏覽器</a>
+        <a href="#ranking" class="hover:text-[#A83E28] transition">四大名店總覽</a>
+        <a href="#compare" class="hover:text-[#A83E28] transition">規格對決表</a>
+        <a href="#picker" class="hover:text-[#A83E28] transition">30秒幫我挑</a>
+        <a href="#reviews" class="hover:text-[#A83E28] transition">食客真實評價</a>
+        <button onclick="openAddStoreModal()" class="text-[#A83E28] hover:text-[#2C1810] transition flex items-center gap-1 cursor-pointer">
+          <span>＋ 新增店家</span>
+        </button>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button onclick="openAddStoreModal()" class="md:hidden px-3 py-2 rounded-full border border-[#A83E28] text-[#A83E28] hover:bg-[#A83E28] hover:text-white text-xs font-bold transition">
+          ＋ 新增店家
+        </button>
+        <a href="#ranking" class="px-4 py-2 rounded-full bg-[#2C1810] text-white text-xs sm:text-sm font-bold hover:bg-[#A83E28] transition shadow-sm">
+          直達精選品牌
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 首頁主視覺 Hero：完整復刻模板構圖與配色 -->
+  <section id="top" class="relative overflow-hidden border-b border-[#E5DFD6] pt-10 pb-16 sm:py-20">
+    <!-- 左上角融化黑巧克力裝飾 SVG -->
+    <svg class="pointer-events-none absolute -top-2 -left-4 w-44 sm:w-64 h-44 sm:h-64 opacity-95" viewBox="0 0 260 220" fill="none">
+      <path d="M-10 -10 H240 C225 18 195 25 170 22 C145 19 135 45 110 42 C85 39 78 75 55 72 C32 69 25 115 -10 110 Z" fill="url(#meltedChoco)" />
+      <path d="M35 55 C55 48 85 30 125 22" stroke="#6B3E2E" stroke-width="3" stroke-linecap="round" opacity="0.6" />
+      <defs>
+        <linearGradient id="meltedChoco" x1="0" y1="0" x2="180" y2="120" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#24110A" />
+          <stop offset="65%" stop-color="#3E2015" />
+          <stop offset="100%" stop-color="#5B3121" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <!-- 左側斜切巧克力磚與松露球裝飾 SVG -->
+    <svg class="pointer-events-none hidden sm:block absolute left-0 top-1/2 -translate-y-1/4 w-28 h-64" viewBox="0 0 110 260" fill="none">
+      <g transform="rotate(-24 10 60)">
+        <rect x="-25" y="20" width="68" height="86" rx="6" fill="#3B1E14" />
+        <rect x="-17" y="28" width="22" height="32" rx="3" fill="#4E291C" stroke="#24110A" stroke-width="2" />
+        <rect x="11" y="28" width="22" height="32" rx="3" fill="#4E291C" stroke="#24110A" stroke-width="2" />
+        <rect x="-17" y="66" width="22" height="32" rx="3" fill="#4E291C" stroke="#24110A" stroke-width="2" />
+        <rect x="11" y="66" width="22" height="32" rx="3" fill="#4E291C" stroke="#24110A" stroke-width="2" />
+      </g>
+      <rect x="14" y="168" width="34" height="38" rx="8" transform="rotate(14 31 187)" fill="#4A2518" />
+      <path d="M18 175 C26 172 36 174 42 180" stroke="#78422E" stroke-width="2.5" stroke-linecap="round" />
+    </svg>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- 左側標題區：復刻 20XX / 黑粗體大標 / 銀灰副標 / 關鍵字列 -->
+        <div class="lg:col-span-7 space-y-5 pt-6 sm:pt-4">
+          <div class="hero-year text-4xl sm:text-6xl leading-none">2026</div>
+          <h1 class="hero-main-title text-4xl sm:text-6xl lg:text-[64px] leading-[1.12]">
+            甜品蛋糕評價大賞
+          </h1>
+          <p class="hero-en-sub text-sm sm:text-xl font-medium uppercase">
+            CAKE REVIEW &amp; TASTING REPORT
+          </p>
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm sm:text-base text-[#5E5A54] tracking-widest pt-1">
+            <span>造型美學</span>
+            <span>經典風味</span>
+            <span>法式工藝</span>
+            <span>真實評比</span>
+            <button onclick="openAddStoreModal()" class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#A83E28]/10 hover:bg-[#A83E28] text-[#A83E28] hover:text-white font-bold text-xs sm:text-sm tracking-normal border border-[#A83E28]/30 transition cursor-pointer">
+              ＋ 新增店家
+            </button>
+          </div>
+
+          <!-- 四大指定品牌順序快速跳轉膠囊 -->
+          <div class="pt-4">
+            <p class="text-xs font-bold text-[#A83E28] tracking-wider mb-3">收錄精選名店 · 點擊查看店家資訊與官網</p>
+            <div id="hero-quick-brands" class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl">
+              <!-- 由 JS 動態渲染包含新增店家在內的所有品牌 -->
+            </div>
+          </div>
+        </div>
+
+        <!-- 右側白瓷盤黑森林櫻桃巧克力蛋糕插畫：復刻模板右側主視覺 -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <div class="relative w-72 h-72 sm:w-96 sm:h-96 flex items-center justify-center">
+            <svg viewBox="0 0 360 360" class="w-full h-full drop-shadow-2xl">
+              <!-- 白瓷大圓盤 -->
+              <circle cx="185" cy="180" r="168" fill="#FFFFFF" stroke="#E8E3DC" stroke-width="3" />
+              <circle cx="185" cy="180" r="138" fill="none" stroke="#F1EDE6" stroke-width="2" />
+              <!-- 盤邊巧克力醬拉花 -->
+              <path d="M48 135 Q35 155 46 175 Q32 195 48 215 Q36 235 55 250" fill="none" stroke="#3B1E14" stroke-width="4.5" stroke-linecap="round" />
+              <!-- 蛋糕本體與底部奶油擠花 -->
+              <circle cx="195" cy="180" r="115" fill="#2A140D" />
+              <g fill="#F8F5F0">
+                <circle cx="88" cy="150" r="9" /><circle cx="84" cy="170" r="9" /><circle cx="86" cy="190" r="9" />
+                <circle cx="93" cy="210" r="9" /><circle cx="104" cy="228" r="9" /><circle cx="120" cy="244" r="9" />
+                <circle cx="139" cy="257" r="9" /><circle cx="160" cy="266" r="9" />
+              </g>
+              <!-- 巧克力脆片與碎屑層次 -->
+              <ellipse cx="198" cy="180" rx="102" ry="98" fill="#472418" />
+              <path d="M125 130 L165 110 L185 145 L145 160 Z" fill="#5D3122" />
+              <path d="M210 105 L260 120 L245 165 L200 150 Z" fill="#361A11" />
+              <path d="M140 215 L195 195 L220 245 L165 255 Z" fill="#5D3122" />
+              <!-- 側邊大片弧形巧克力片 -->
+              <path d="M110 210 C125 255 170 280 215 270 C190 250 175 225 175 195 Z" fill="#4E281B" />
+              <path d="M165 255 C195 275 240 270 268 242 C240 232 215 215 205 190 Z" fill="#3B1D13" />
+              <!-- 白巧克力捲 -->
+              <rect x="235" y="112" width="28" height="14" rx="4" transform="rotate(28 249 119)" fill="#F5EEDB" />
+              <!-- 酒漬黑櫻桃 -->
+              <g>
+                <circle cx="152" cy="146" r="19" fill="#3D0C14" />
+                <ellipse cx="146" cy="140" rx="5" ry="3" transform="rotate(-30 146 140)" fill="#9E3B4B" opacity="0.7" />
+                <circle cx="242" cy="162" r="19" fill="#3D0C14" />
+                <ellipse cx="236" cy="156" rx="5" ry="3" transform="rotate(-30 236 156)" fill="#9E3B4B" opacity="0.7" />
+                <circle cx="182" cy="218" r="18" fill="#350910" />
+                <ellipse cx="176" cy="212" rx="5" ry="3" transform="rotate(-30 176 212)" fill="#9E3B4B" opacity="0.7" />
+              </g>
+              <!-- HAPPY BIRTHDAY 巧克力牌 -->
+              <g transform="rotate(38 228 175)">
+                <rect x="178" y="160" width="102" height="28" rx="4" fill="#4D291C" stroke="#2B140C" stroke-width="2" />
+                <text x="229" y="178" text-anchor="middle" fill="#F2E6D8" font-size="10" font-weight="bold" letter-spacing="0.8">HAPPY BIRTHDAY</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右下角金屬喇叭音樂開關按鈕：復刻模板右下角元素 -->
+    <button id="bgm-toggle" onclick="toggleCafeAudio()" title="開啟 / 關閉咖啡廳鋼琴背景和弦" class="fixed bottom-5 right-5 z-40 w-12 h-12 rounded-full bg-[#2C1810] text-white shadow-lg border-2 border-white/80 flex items-center justify-center hover:bg-[#A83E28] transition">
+      <svg id="icon-sound-off" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M11 5L6 9H2v6h4l5 4V5z" />
+        <line x1="23" y1="9" x2="17" y2="15" />
+        <line x1="17" y1="9" x2="23" y2="15" />
+      </svg>
+      <svg id="icon-sound-on" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M11 5L6 9H2v6h4l5 4V5z" />
+        <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+      </svg>
+    </button>
+  </section>
+
+  <!-- 甜點瀏覽器互動廣告區塊：多層頁籤蛋糕 -->
+  <section id="cake-browser" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-6">
+    <div class="rounded-3xl store-card-bg p-6 sm:p-10 choco-shadow relative overflow-hidden">
+      <!-- 頂部廣告標語與副標 -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-8">
+        <div>
+          <span class="inline-flex items-center gap-1.5 text-xs font-bold tracking-widest uppercase text-[#A83E28] bg-[#A83E28]/10 px-3 py-1 rounded-full">
+            <span>🍰 DESSERT BROWSER · 互動甜點頁籤</span>
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-black text-[#0B0B0B] mt-2.5 tracking-tight">
+            「甜點瀏覽器，讓你一口吃遍所有頁籤。」
+          </h2>
+          <p class="text-sm text-[#5E5A54] mt-1.5">
+            還在開 20 個網頁分頁猶豫今天要吃哪顆蛋糕？直接點擊下方<strong>每一層蛋糕的瀏覽器頁籤</strong>，像跳轉網頁一樣隨機切換夾心口味！
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2.5 shrink-0">
+          <button onclick="shuffleAllCakeTabs()" class="px-4 py-2.5 rounded-xl bg-[#EB8323] hover:bg-[#d67115] text-white text-xs sm:text-sm font-bold shadow-xs transition cursor-pointer">
+            🎲 重新整理全部頁籤口味
+          </button>
+        </div>
+      </div>
+
+      <!-- 瀏覽器外框與多層頁籤蛋糕主體 -->
+      <div class="rounded-2xl bg-white border-2 border-[#2C1810] shadow-xl overflow-hidden">
+        <!-- 瀏覽器頂部工具列與網址列 -->
+        <div class="bg-[#2C1810] text-white px-4 py-3 flex flex-wrap items-center gap-3">
+          <div class="flex items-center gap-1.5">
+            <span class="w-3 h-3 rounded-full bg-[#EB8323]"></span>
+            <span class="w-3 h-3 rounded-full bg-[#F4EDE1]"></span>
+            <span class="w-3 h-3 rounded-full bg-[#A83E28]"></span>
+          </div>
+          <div class="flex-1 min-w-[210px] bg-[#1C0E09] border border-white/15 rounded-lg px-3.5 py-1.5 flex items-center justify-between gap-2 text-xs font-mono">
+            <span id="browser-cake-url" class="text-[#F4EDE1] truncate">cake://dessert-browser/layer-1/迷途韓系草莓戚風</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-[#A83E28] text-white font-sans font-bold shrink-0">HTTPS 美味加密</span>
+          </div>
+          <button id="browser-visit-brand-btn" onclick="openStoreInfoModal('echapper')" class="px-3 py-1.5 rounded-lg bg-[#F4EDE1] hover:bg-[#EB8323] text-[#2C1810] hover:text-white text-xs font-bold transition cursor-pointer shrink-0">
+            前往此層店家資訊 →
+          </button>
+        </div>
+
+        <!-- 多層蛋糕視覺區（含頂部櫻桃蠟燭與三層可點擊頁籤蛋糕） -->
+        <div class="p-6 sm:p-10 bg-gradient-to-b from-[#FBF8F3] to-[#F3ECE0] flex flex-col items-center">
+          <!-- 蛋糕頂部蠟燭與糖霜裝飾 -->
+          <div class="flex flex-col items-center mb-1 select-none">
+            <div class="w-2.5 h-3.5 rounded-full bg-[#EB8323] animate-pulse shadow-[0_0_10px_#EB8323]"></div>
+            <div class="w-2 h-6 bg-repeating-linear-gradient rounded-t-sm bg-[#A83E28] border-x border-white"></div>
+            <div class="flex items-center gap-2 text-lg -mt-1">
+              <span>🍒</span><span class="text-xs font-bold text-[#6B4423] tracking-widest bg-white/80 px-2.5 py-0.5 rounded-full border border-[#E2D6C3]">點擊任一頁籤層切換口味</span><span>🍓</span>
+            </div>
+          </div>
+
+          <!-- 三層「瀏覽器頁籤蛋糕」容器（由 JS 動態渲染並支援點擊隨機換口味） -->
+          <div id="cake-tab-layers" class="w-full max-w-3xl flex flex-col items-center space-y-2 mt-2">
+            <!-- JS 動態生成 3 層不同寬度的頁籤蛋糕 -->
+          </div>
+
+          <!-- 底部白瓷蛋糕托盤 -->
+          <div class="w-full max-w-4xl h-4 rounded-full bg-white border border-[#DCD4C8] shadow-md mt-2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 四大名店深度評比卡片（含內嵌店家資訊卡與點擊查看官網彈窗） -->
+  <section id="ranking" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+      <div>
+        <span class="text-xs font-bold tracking-widest uppercase text-[#A83E28]">FEATURED CAKE STUDIOS</span>
+        <h2 class="text-2xl sm:text-4xl font-black text-[#0B0B0B] mt-1">四大必吃蛋糕品牌深度評比</h2>
+      </div>
+      <!-- 篩選按鈕 -->
+      <div class="flex flex-wrap gap-2">
+        <button id="filter-all-btn" onclick="filterBrands('all')" data-filter="all" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-[#2C1810] text-white transition">全部品牌 (4)</button>
+        <button onclick="filterBrands('custom')" data-filter="custom" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-white text-[#4A2C2A] border border-[#E2DBD0] hover:border-[#2C1810] transition">客製慶生</button>
+        <button onclick="filterBrands('classic')" data-filter="classic" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-white text-[#4A2C2A] border border-[#E2DBD0] hover:border-[#2C1810] transition">經典鮮奶油 / 生乳捲</button>
+        <button onclick="filterBrands('french')" data-filter="french" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-white text-[#4A2C2A] border border-[#E2DBD0] hover:border-[#2C1810] transition">精品法式塔派</button>
+        <button onclick="openAddStoreModal()" class="px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-[#A83E28] text-white hover:bg-[#2C1810] transition shadow-xs">＋ 新增店家</button>
+      </div>
+    </div>
+
+    <div id="brand-cards-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- 由 JavaScript 動態渲染 4 張品牌評比卡片 -->
+    </div>
+  </section>
+
+  <!-- 橫向規格與官方連結對決表 -->
+  <section id="compare" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="bg-white/95 rounded-3xl border border-[#E5DFD6] p-6 sm:p-10 choco-shadow">
+      <div class="mb-6">
+        <span class="text-xs font-bold tracking-widest uppercase text-[#A83E28]">SPECIFICATION MATRIX</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-[#0B0B0B] mt-1">四大蛋糕名店橫向規格對決表</h2>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse min-w-[760px]">
+          <thead>
+            <tr class="border-b-2 border-[#2C1810] text-xs uppercase text-[#7D7D7D]">
+              <th class="py-3.5 px-4">排名與品牌</th>
+              <th class="py-3.5 px-4">主打路線</th>
+              <th class="py-3.5 px-4">招牌必點</th>
+              <th class="py-3.5 px-4">參考消費</th>
+              <th class="py-3.5 px-4">綜合評分</th>
+              <th class="py-3.5 px-4 text-right">店家資訊與官網</th>
+            </tr>
+          </thead>
+          <tbody id="compare-table-body" class="divide-y divide-[#EDE8E0] text-sm">
+            <!-- JS 動態填入 -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 30 秒幫我挑蛋糕互動推薦器 -->
+  <section id="picker" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="rounded-3xl bg-[#2C1810] text-white p-6 sm:p-12 choco-shadow">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 space-y-5">
+          <span class="text-xs font-bold tracking-widest uppercase text-[#EB8323]">SMART CAKE FINDER</span>
+          <h2 class="text-2xl sm:text-4xl font-black leading-tight">選擇障礙？30 秒配對你的命定蛋糕</h2>
+          <p class="text-sm text-[#D9CEC5]">點選本次慶祝場合，系統立即為您推薦最適合的店家與必點招牌：</p>
+          <div class="grid grid-cols-2 gap-3 pt-2">
+            <button onclick="recommendBrand('echapper')" class="p-3.5 rounded-xl bg-white/10 hover:bg-[#A83E28] text-left transition border border-white/15">
+              <div class="font-bold text-sm">🎂 閨蜜 / 生日驚喜</div>
+              <div class="text-xs text-[#D9CEC5] mt-0.5">追求高顏值韓系或客製造型</div>
+            </button>
+            <button onclick="recommendBrand('kitsumuraya')" class="p-3.5 rounded-xl bg-white/10 hover:bg-[#A83E28] text-left transition border border-white/15">
+              <div class="font-bold text-sm">🎁 彌月 / 辦公室午茶</div>
+              <div class="text-xs text-[#D9CEC5] mt-0.5">好分食生乳捲與彌月禮盒</div>
+            </button>
+            <button onclick="recommendBrand('hongyeh')" class="p-3.5 rounded-xl bg-white/10 hover:bg-[#A83E28] text-left transition border border-white/15">
+              <div class="font-bold text-sm">👨‍👩‍👧‍👦 長輩祝壽 / 家族聚餐</div>
+              <div class="text-xs text-[#D9CEC5] mt-0.5">清爽不膩口經典鮮奶油</div>
+            </button>
+            <button onclick="recommendBrand('minuit')" class="p-3.5 rounded-xl bg-white/10 hover:bg-[#A83E28] text-left transition border border-white/15">
+              <div class="font-bold text-sm">🍷 大人系深夜微醺</div>
+              <div class="text-xs text-[#D9CEC5] mt-0.5">極致濃郁苦甜生巧克力塔</div>
+            </button>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-2.5 text-xs font-bold" id="footer-brand-links">
+          <!-- 由 JS 動態渲染包含新增店家在內的官網連結 -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 食客真實評價牆 + 新增評價表單 -->
+  <section id="reviews" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <!-- 撰寫評價表單 -->
+      <div class="lg:col-span-5">
+        <div class="bg-white rounded-3xl border border-[#E5DFD6] p-6 sm:p-8 choco-shadow sticky top-24">
+          <span class="text-xs font-bold tracking-widest uppercase text-[#A83E28]">SHARE YOUR TASTING</span>
+          <h3 class="text-xl sm:text-2xl font-black text-[#0B0B0B] mt-1 mb-5">發表你的蛋糕試吃評價</h3>
+          <form id="review-form" onsubmit="submitReview(event)" class="space-y-4">
+            <div>
+              <label class="block text-xs font-bold text-[#4A2C2A] mb-1.5">選擇評價品牌</label>
+              <select id="review-brand-select" class="w-full px-4 py-2.5 rounded-xl border border-[#DCD4C8] bg-[#FBF8F3] text-sm font-bold focus:outline-none focus:border-[#A83E28]">
+                <option value="echapper">#01 迷途糕點工作室</option>
+                <option value="kitsumuraya">#02 橘村屋 Kitsumuraya</option>
+                <option value="hongyeh">#03 紅葉蛋糕 Hong Yeh</option>
+                <option value="minuit">#04 深夜裡的法國手工甜點</option>
+              </select>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-bold text-[#4A2C2A] mb-1.5">您的暱稱</label>
+                <input id="review-author" type="text" required placeholder="例如：永和甜點控" class="w-full px-4 py-2.5 rounded-xl border border-[#DCD4C8] bg-[#FBF8F3] text-sm focus:outline-none focus:border-[#A83E28]" />
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-[#4A2C2A] mb-1.5">評分星等</label>
+                <select id="review-rating" class="w-full px-4 py-2.5 rounded-xl border border-[#DCD4C8] bg-[#FBF8F3] text-sm font-bold text-[#EB8323] focus:outline-none focus:border-[#A83E28]">
+                  <option value="5">★★★★★ (5.0)</option>
+                  <option value="4.8">★★★★★ (4.8)</option>
+                  <option value="4.5">★★★★☆ (4.5)</option>
+                  <option value="4">★★★★☆ (4.0)</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-[#4A2C2A] mb-1.5">購買品項與試吃心得</label>
+              <textarea id="review-content" rows="3" required placeholder="分享蛋糕體口感、鮮奶油甜度或造型細節..." class="w-full px-4 py-2.5 rounded-xl border border-[#DCD4C8] bg-[#FBF8F3] text-sm focus:outline-none focus:border-[#A83E28]"></textarea>
+            </div>
+            <button type="submit" class="w-full py-3 rounded-xl bg-[#A83E28] hover:bg-[#2C1810] text-white font-bold text-sm transition shadow-sm">
+              送出真實評價
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- 評價列表 -->
+      <div class="lg:col-span-7 space-y-4">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="text-xl sm:text-2xl font-black text-[#0B0B0B]">最新食客試吃評論</h3>
+          <span id="review-count-badge" class="text-xs font-bold px-3 py-1 rounded-full bg-[#2C1810] text-white">共 4 則精選評論</span>
+        </div>
+        <div id="reviews-list" class="space-y-4">
+          <!-- JS 動態渲染 -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾：四大官方網站連結總匯 -->
+  <footer class="bg-[#2C1810] text-white border-t border-[#4A2C2A] py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-white/15">
+        <div>
+          <div class="text-xl font-black tracking-tight">2026 甜品蛋糕評價大賞</div>
+          <p class="text-xs text-[#C7B9AE] mt-1">嚴選台灣四大人氣蛋糕品牌 · 點擊下方按鈕可直接造訪官方網站或檢視店家資訊</p>
+        </div>
+        <div class="flex flex-wrap gap-2.5 text-xs font-bold">
+          <a href="https://www.echappercakestudio.com.tw/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-[#A83E28] hover:bg-[#c24b33] transition">01 迷途糕點官網 ↗</a>
+          <a href="https://kmcake.tw/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition">02 橘村屋官網 ↗</a>
+          <a href="https://www.hongyehcake.com.tw/?cbs=J5uU86ILC_xAxPFaFsSbirSELGkPgZgNCbcJlLD6GanzGdXdEq6GeuadhBsWuxXIKLuAUJE4" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition">03 紅葉蛋糕官網 ↗</a>
+          <a href="https://minuit.com.tw/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition">04 深夜裡的法國手工甜點官網 ↗</a>
+        </div>
+      </div>
+      <p class="text-[11px] text-[#9E8E82] pt-6 text-center sm:text-left">
+        © 2026 甜品蛋糕評價大賞 CAKE REVIEW &amp; TASTING REPORT. 店家資訊若官網未標示之項目均統一標註「待續新增」。
+      </p>
+    </div>
+  </footer>
+
+  <!-- 店家資訊彈出視窗：100% 還原圖片2.png 模板結構、字體、色系與欄位 -->
+  <div id="store-info-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/55 backdrop-blur-xs" onclick="if(event.target === this) closeStoreInfoModal()">
+    <div class="w-full max-w-lg rounded-2xl store-card-bg p-6 sm:p-8 shadow-2xl relative animate-[fadeIn_0.2s_ease-out]">
+      <!-- 頂部：楷體標題「店家資訊」 + 右上關閉與直達外部官網連結 -->
+      <div class="flex items-center justify-between mb-6">
+        <div class="flex items-center gap-3">
+          <h3 class="font-serif-store text-2xl sm:text-[26px] font-bold text-[#6B4423] tracking-wider">店家資訊</h3>
+          <span id="modal-brand-badge" class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-[#EFE7DB] text-[#6B4423]">#01 迷途糕點</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <a id="modal-official-url" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#2C1810] hover:bg-[#A83E28] text-white text-xs font-bold transition">
+            前往官方網站 ↗
+          </a>
+          <button onclick="closeStoreInfoModal()" aria-label="關閉視窗" class="w-8 h-8 rounded-full bg-[#EFE7DB] hover:bg-[#E2D6C3] text-[#6B4423] flex items-center justify-center font-bold transition">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <!-- 六大標準欄位清單：地址、參考消費、步行時間、營業時間、出餐速度、招牌餐點（官網未提供顯示「待續新增」） -->
+      <div id="modal-info-rows" class="space-y-3.5 text-[15px] leading-relaxed mb-7">
+        <!-- JS 動態填入 -->
+      </div>
+
+      <!-- 底部三顆按鈕：完全還原圖片2.png 暖橘實心「開啟 Google 地圖」+ 兩顆米白外框「收藏店家」「分享評論」 -->
+      <div class="flex flex-wrap items-center gap-3">
+        <a id="modal-gmap-btn" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 min-w-[150px] py-2.5 px-5 rounded-lg bg-[#EB8323] hover:bg-[#d67115] text-white font-bold text-[15px] text-center shadow-xs transition">
+          開啟 Google 地圖
+        </a>
+        <button id="modal-bookmark-btn" onclick="toggleBookmarkStore()" class="py-2.5 px-5 rounded-lg bg-[#F4EDE1] hover:bg-[#EAE0CE] border border-[#D4C5B0] text-[#7A6248] font-medium text-[15px] transition">
+          收藏店家
+        </button>
+        <button onclick="jumpToReviewFromModal()" class="py-2.5 px-5 rounded-lg bg-[#F4EDE1] hover:bg-[#EAE0CE] border border-[#D4C5B0] text-[#7A6248] font-medium text-[15px] transition">
+          分享評論
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 新增店家彈出視窗：沿用暖米白「店家資訊」風格，未填欄位自動標註「待續新增」 -->
+  <div id="add-store-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/55 backdrop-blur-xs" onclick="if(event.target === this) closeAddStoreModal()">
+    <div class="w-full max-w-xl max-h-[90vh] overflow-y-auto rounded-2xl store-card-bg p-6 sm:p-8 shadow-2xl relative">
+      <div class="flex items-center justify-between mb-5 pb-3 border-b border-[#E5DFD6]">
+        <div>
+          <h3 class="font-serif-store text-2xl font-bold text-[#6B4423] tracking-wider">新增蛋糕店家</h3>
+          <p class="text-xs text-[#8C755B] mt-0.5">填寫新收錄的蛋糕工作室或品牌資訊，空白欄位將自動顯示「待續新增」</p>
+        </div>
+        <button onclick="closeAddStoreModal()" aria-label="關閉新增視窗" class="w-8 h-8 rounded-full bg-[#EFE7DB] hover:bg-[#E2D6C3] text-[#6B4423] flex items-center justify-center font-bold transition">
+          ✕
+        </button>
+      </div>
+
+      <form id="add-store-form" onsubmit="handleAddStoreSubmit(event)" class="space-y-4 text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-[#6B4423] mb-1">店家名稱 <span class="text-[#A83E28]">*</span></label>
+            <input id="new-store-name" type="text" required placeholder="例如：法朋烘焙甜點坊" class="w-full px-3.5 py-2 rounded-lg border border-[#D4C5B0] bg-white focus:outline-none focus:border-[#A83E28]" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-[#6B4423] mb-1">英文名稱 / 副標</label>
+            <input id="new-store-en" type="text" placeholder="例如：Le Ruban Pâtisserie" class="w-full px-3.5 py-2 rounded-lg border border-[#D4C5B0] bg-white focus:outline-none focus:border-[#A83E28]" />
+          </div>
+        </div>
+
+  <!-- 新增店家彈出視窗：100% 復刻圖片3.png「AI 智慧建檔」模板並融入暖米白烘焙主題 -->
+  <div id="add-store-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/55 backdrop-blur-xs" onclick="if(event.target === this) closeAddStoreModal()">
+    <div class="w-full max-w-3xl rounded-2xl store-card-bg p-6 sm:p-8 shadow-2xl relative border border-[#E2D6C3]">
+      <!-- 頂部標題列：左側楷體「AI 智慧建檔」 + 右側淺米色膠囊「✨ 自動解析網頁與蛋糕熱點」與關閉鈕 -->
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+        <div class="flex items-center gap-3">
+          <h3 class="font-serif-store text-2xl sm:text-[26px] font-bold text-[#6B4423] tracking-wider">AI 智慧建檔</h3>
+          <span class="hidden sm:inline-block text-xs font-bold text-[#A83E28] bg-[#A83E28]/10 px-2.5 py-0.5 rounded-full">新增蛋糕店家</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F3E9D8] border border-[#E2D5C1] text-[#6B4423] text-xs font-bold shadow-2xs">
+            <span>✨</span>
+            <span>自動解析網頁與蛋糕熱點</span>
+          </span>
+          <button onclick="closeAddStoreModal()" aria-label="關閉新增視窗" class="w-8 h-8 rounded-full bg-[#EFE7DB] hover:bg-[#E2D6C3] text-[#6B4423] flex items-center justify-center font-bold transition">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <form id="add-store-form" onsubmit="handleAddStoreSubmit(event)" class="space-y-5 text-sm">
+        <!-- 欄位 1：店名 * -->
+        <div>
+          <label class="block text-sm font-bold text-[#6B4423] mb-2">
+            1. 蛋糕店名稱 <span class="text-[#A83E28]">*</span>
+          </label>
+          <input id="new-store-name" type="text" required placeholder="例如：法朋烘焙甜點坊 或 Lady M 台北旗艦店" class="w-full px-4 py-3 rounded-xl border border-[#DFD5C7] bg-white text-[#0B0B0B] placeholder-[#A89F94] text-sm focus:outline-none focus:border-[#EB8323] focus:ring-2 focus:ring-[#EB8323]/20 transition" />
+        </div>
+
+        <!-- 欄位 2：網址或社群 * -->
+        <div>
+          <label class="block text-sm font-bold text-[#6B4423] mb-2">
+            2. 網址或社群（官網 / IG / FB） <span class="text-[#A83E28]">*</span>
+          </label>
+          <input id="new-store-url" type="url" required placeholder="例如：https://..." class="w-full px-4 py-3 rounded-xl border border-[#DFD5C7] bg-white text-[#0B0B0B] placeholder-[#A89F94] text-sm focus:outline-none focus:border-[#EB8323] focus:ring-2 focus:ring-[#EB8323]/20 transition" />
+        </div>
+
+        <!-- 欄位 3：補充菜單或貼上網頁簡介 -->
+        <div>
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+            <label class="text-sm font-bold text-[#6B4423]">
+              3. 補充菜單或貼上網頁簡介（選填，可讓 AI 整理更精準）
+            </label>
+            <span class="text-xs text-[#9C8A76]">支援貼上地址、營業時間、價位或推薦招牌蛋糕</span>
+          </div>
+          <textarea id="new-store-raw-text" rows="4" placeholder="可貼上官網介紹文字、推薦招牌蛋糕、價位或營業時間，AI 將優先採納並結構化整理（未提供欄位將自動標示「待續新增」）..." class="w-full px-4 py-3 rounded-xl border border-[#DFD5C7] bg-white text-[#0B0B0B] placeholder-[#A89F94] text-sm leading-relaxed focus:outline-none focus:border-[#EB8323] focus:ring-2 focus:ring-[#EB8323]/20 transition"></textarea>
+        </div>
+
+        <!-- 底部雙按鈕：完全還原圖片3.png 暖橘實心主按鈕 + 暖米白次要按鈕 -->
+        <div class="flex flex-wrap items-center gap-3 pt-2">
+          <button type="submit" class="inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-[#EB8323] hover:bg-[#d67115] text-white font-bold text-sm shadow-sm transition cursor-pointer">
+            <span>✨</span>
+            <span>AI 自動整理並加入店家</span>
+          </button>
+          <button type="button" onclick="fillSampleCakeStore()" class="py-3 px-5 rounded-xl bg-[#F4EDE1] hover:bg-[#EAE0CE] border border-[#D4C5B0] text-[#7A6248] font-bold text-sm transition cursor-pointer">
+            填入測試範例
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast 提示訊息框（取代 alert） -->
+  <div id="toast-box" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 hidden px-5 py-3 rounded-full bg-[#2C1810] text-white text-xs sm:text-sm font-bold shadow-xl border border-white/15">
+    提示訊息
+  </div>
+
+  <script>
+    // 四大蛋糕品牌完整資料庫（嚴格依照使用者指定順序：1.迷途糕點 2.橘村屋 3.紅葉蛋糕 4.深夜裡的法國手工甜點）
+    const BRANDS = [
+      {
+        id: 'echapper',
+        rank: '01',
+        name: '迷途糕點工作室',
+        enName: 'échapper cake studio',
+        category: 'custom',
+        categoryLabel: '客製慶生 · 韓系造型',
+        url: 'https://www.echappercakestudio.com.tw/',
+        rating: 4.9,
+        summary: '主打高顏值客製化鮮奶油戚風蛋糕，從韓系蝶結、鮮花皇冠到趣味燃燒蛋糕與自由配一應俱全，是年輕族群慶生首選。',
+        tags: ['韓系造型冠軍', 'Make Your Own Cake', '減糖戚風鮮奶油'],
+        scores: { aesthetic: 98, cream: 94, cp: 92 },
+        storeInfo: {
+          address: '新北市永和區文化路90巷14號',
+          priceRange: 'NT$680 – NT$2,380（依尺寸與造型而定）',
+          walkTime: '', // 官網未提供 -> 自動顯示「待續新增」
+          hours: '週一 15:00-21:30、週三~日 12:00-21:30（週二公休，週三視可預定日期）',
+          servingSpeed: '', // 官網未提供 -> 自動顯示「待續新增」
+          signature: '仙氣水果蛋糕、蛋殼鮮花蛋糕、3.5" 調色盤DIY蛋糕、燃燒蛋糕',
+          mapQuery: '新北市永和區文化路90巷14號 迷途甜點工作室'
+        }
+      },
+      {
+        id: 'kitsumuraya',
+        rank: '02',
+        name: '橘村屋',
+        enName: 'Kitsumuraya',
+        category: 'classic',
+        categoryLabel: '生乳捲 · 彌月伴手禮',
+        url: 'https://kmcake.tw/',
+        rating: 4.8,
+        summary: '北台灣人氣生乳捲與彌月蛋糕名店，嚴選北海道十勝鮮奶油與龍眼花蜜，口感濕潤綿密、奶香純淨不膩，門市據點豐富。',
+        tags: ['招牌楓糖葡萄捲', '彌月試吃首選', '多門市自取便利'],
+        scores: { aesthetic: 88, cream: 95, cp: 95 },
+        storeInfo: {
+          address: '新北市板橋區文化路二段483號（板橋門市及全台多間百貨專櫃）',
+          priceRange: 'NT$360 – NT$880（依捲類與派盒款式而定）',
+          walkTime: '', // 官網未提供 -> 自動顯示「待續新增」
+          hours: '依各門市與百貨營業時間為準（官網提供宅配與門市預訂）',
+          servingSpeed: '', // 官網未提供 -> 自動顯示「待續新增」
+          signature: '招牌楓糖葡萄捲、雲朵蜂蜜蛋糕、摩卡咖啡捲、草莓派',
+          mapQuery: '橘村屋 Kitsumuraya'
+        }
+      },
+      {
+        id: 'hongyeh',
+        rank: '03',
+        name: '紅葉蛋糕',
+        enName: 'Hong Yeh Cake',
+        category: 'classic',
+        categoryLabel: '老字號經典 · 鮮奶油傳奇',
+        url: 'https://www.hongyehcake.com.tw/?cbs=J5uU86ILC_xAxPFaFsSbirSELGkPgZgNCbcJlLD6GanzGdXdEq6GeuadhBsWuxXIKLuAUJE4',
+        rating: 4.9,
+        summary: '創立於 1966 年的台灣鮮奶油蛋糕始祖，獨門動物性鮮奶油輕盈如雲朵、完全不甜膩，黑森林與芋泥鮮奶油更是跨世代家庭慶生必備。',
+        tags: ['1966 經典老店', '雲朵級鮮奶油', '長輩家族聚餐必買'],
+        scores: { aesthetic: 85, cream: 99, cp: 94 },
+        storeInfo: {
+          address: '台北市大安區仁愛路三段26號之5（仁愛總店及雙北/桃園/新竹分店）',
+          priceRange: 'NT$780 – NT$2,600（依 6吋至 14吋規格而定）',
+          walkTime: '', // 官網未提供 -> 自動顯示「待續新增」
+          hours: '週一至週日 09:00-21:00（各分店略有調整，詳見官網門市資訊）',
+          servingSpeed: '', // 官網未提供 -> 自動顯示「待續新增」
+          signature: '經典黑森林蛋糕、鮮奶油芋泥蛋糕、鮮奶油巧克力蛋糕',
+          mapQuery: '紅葉蛋糕 仁愛總店'
+        }
+      },
+      {
+        id: 'minuit',
+        rank: '04',
+        name: '深夜裡的法國手工甜點',
+        enName: 'Minuit French Handmade Dessert',
+        category: 'french',
+        categoryLabel: '精品法式塔派 · 濃郁可可',
+        url: 'https://minuit.com.tw/',
+        rating: 4.8,
+        summary: '從深夜排隊傳奇起家的頂級法式塔派品牌，以法國頂級莊園巧克力、厚實塔皮與飽滿當季水果聞名，可可濃度與層次感極具震撼力。',
+        tags: ['莊園級生巧克力塔', '手工香脆塔皮', '大人系微醺甜點'],
+        scores: { aesthetic: 95, cream: 93, cp: 87 },
+        storeInfo: {
+          address: '台北市大安區金山南路二段141巷1號（古亭概念店）',
+          priceRange: 'NT$480 – NT$1,680（依單份或 10吋整模塔派而定）',
+          walkTime: '', // 官網未提供 -> 自動顯示「待續新增」
+          hours: '16:00-23:15（週三公休，詳細取貨時段依官網預約系統為主）',
+          servingSpeed: '', // 官網未提供 -> 自動顯示「待續新增」
+          signature: '生巧克力塔、白色戀人生巧克力塔、法國栗子蒙布朗、季節水果塔',
+          mapQuery: '深夜裡的法國手工甜點 台北市大安區金山南路二段141巷1號'
+        }
+      }
+    ];
+
+    // 初始食客評價資料
+    let reviewsData = [
+      {
+        brandId: 'echapper',
+        brandName: '迷途糕點工作室',
+        author: '永和林小姐',
+        rating: 5.0,
+        date: '2026-11-12',
+        content: '訂了 6 吋仙氣水果蛋糕幫閨蜜慶生，戚風體非常濕潤蓬鬆，鮮奶油完全不會甜膩，拍照效果超級驚豔！'
+      },
+      {
+        brandId: 'kitsumuraya',
+        brandName: '橘村屋',
+        author: '新手媽媽 Vivian',
+        rating: 4.8,
+        date: '2026-11-08',
+        content: '彌月禮盒選了招牌楓糖葡萄捲，同事和長輩一致好評，蛋糕體帶著淡淡蜂蜜香氣，冰過更好吃。'
+      },
+      {
+        brandId: 'hongyeh',
+        brandName: '紅葉蛋糕',
+        author: '大安區陳先生',
+        rating: 5.0,
+        date: '2026-11-02',
+        content: '家裡每年長輩生日一定買紅葉黑森林，巧克力屑配上那層入口即化的鮮奶油，吃了二十年味道始終如一。'
+      },
+      {
+        brandId: 'minuit',
+        brandName: '深夜裡的法國手工甜點',
+        author: '可可重度愛好者',
+        rating: 4.9,
+        date: '2026-10-25',
+        content: '生巧克力塔的可可厚度非常有誠意，苦甜平衡得恰到好處，塔皮酥脆不濕軟，配無糖紅茶簡直完美。'
+      }
+    ];
+
+    let activeModalBrandId = 'echapper';
+    let currentFilter = 'all';
+    const bookmarkedIds = new Set();
+
+    // 甜點瀏覽器：多層頁籤蛋糕口味庫
+    const CAKE_TAB_FLAVORS = [
+      {
+        tabTitle: '🍓 迷途韓系草莓戚風.tab',
+        flavorName: '減糖大湖草莓鮮奶油戚風',
+        brandId: 'echapper',
+        brandLabel: '#01 迷途糕點工作室',
+        urlPath: 'cake://echapper/韓系草莓戚風',
+        bgHex: '#FCE7EA',
+        borderHex: '#E8A5B0',
+        frostingHex: '#FFF8F9',
+        textHex: '#6E2633',
+        badgeHex: '#D9536F'
+      },
+      {
+        tabTitle: '🍯 橘村屋十勝楓糖捲.tab',
+        flavorName: '北海道十勝生乳 × 龍眼花蜜夾心',
+        brandId: 'kitsumuraya',
+        brandLabel: '#02 橘村屋',
+        urlPath: 'cake://kitsumuraya/招牌楓糖葡萄捲',
+        bgHex: '#FDF2DC',
+        borderHex: '#E6BD73',
+        frostingHex: '#FFFDF7',
+        textHex: '#6B4423',
+        badgeHex: '#EB8323'
+      },
+      {
+        tabTitle: '🍫 紅葉雲朵黑森林.tab',
+        flavorName: '1966 經典雲朵鮮奶油 × 酒漬黑櫻桃',
+        brandId: 'hongyeh',
+        brandLabel: '#03 紅葉蛋糕',
+        urlPath: 'cake://hongyeh/經典黑森林鮮奶油',
+        bgHex: '#EFE4DC',
+        borderHex: '#B8947E',
+        frostingHex: '#FAF6F2',
+        textHex: '#3E2015',
+        badgeHex: '#5B3121'
+      },
+      {
+        tabTitle: '🌑 深夜莊園生巧塔.tab',
+        flavorName: '法國頂級莊園苦甜生巧克力 × 香脆塔皮',
+        brandId: 'minuit',
+        brandLabel: '#04 深夜裡的法國手工甜點',
+        urlPath: 'cake://minuit/莊園級生巧克力塔',
+        bgHex: '#E5DCD6',
+        borderHex: '#8C7062',
+        frostingHex: '#F7F3F0',
+        textHex: '#2C1810',
+        badgeHex: '#2C1810'
+      },
+      {
+        tabTitle: '🍵 宇治焙茶芋泥布丁.tab',
+        flavorName: '手炒大甲芋泥 × 滑嫩雞蛋布丁夾層',
+        brandId: 'echapper',
+        brandLabel: '#01 迷途糕點工作室',
+        urlPath: 'cake://echapper/芝麻芋泥布丁鮮奶油',
+        bgHex: '#EAE6F2',
+        borderHex: '#B3A7CC',
+        frostingHex: '#F9F8FC',
+        textHex: '#3E3354',
+        badgeHex: '#6D5B94'
+      },
+      {
+        tabTitle: '🌰 法國栗子蒙布朗.tab',
+        flavorName: '香濃法式栗子泥 × 蘭姆酒香香緹',
+        brandId: 'minuit',
+        brandLabel: '#04 深夜裡的法國手工甜點',
+        urlPath: 'cake://minuit/法國栗子蒙布朗塔',
+        bgHex: '#F2E7D5',
+        borderHex: '#C7AD85',
+        frostingHex: '#FCF9F2',
+        textHex: '#594222',
+        badgeHex: '#9C7338'
+      }
+    ];
+
+    // 目前三層蛋糕各自顯示的口味索引（由上而下：頂層、中層、底層）
+    let activeCakeLayers = [0, 1, 2];
+    let focusedLayerIndex = 0;
+
+    // 渲染多層頁籤蛋糕
+    function renderCakeTabLayers() {
+      const container = document.getElementById('cake-tab-layers');
+      if (!container) return;
+
+      const widthClasses = ['w-full sm:w-[74%]', 'w-full sm:w-[87%]', 'w-full'];
+      const layerNames = ['TOP 頂層分頁', 'MID 中層分頁', 'BASE 底層分頁'];
+
+      container.innerHTML = activeCakeLayers.map((flavorIdx, layerIdx) => {
+        const item = CAKE_TAB_FLAVORS[flavorIdx];
+        const isFocused = focusedLayerIndex === layerIdx;
+        return `
+          <div class="${widthClasses[layerIdx]} transition-all duration-300">
+            <!-- 瀏覽器頁籤耳朵（Tab Handle） -->
+            <div class="flex items-end justify-between px-3">
+              <button onclick="cycleCakeLayerFlavor(${layerIdx})"
+                style="background-color: ${item.bgHex}; border-color: ${item.borderHex}; color: ${item.textHex};"
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-t-xl border-t-2 border-x-2 text-xs sm:text-sm font-black shadow-2xs hover:brightness-95 transition cursor-pointer">
+                <span>${item.tabTitle}</span>
+                <span class="text-[11px] opacity-70">↻ 換口味</span>
+              </button>
+              <span class="text-[11px] font-bold text-[#8C755B] pb-1">${layerNames[layerIdx]}</span>
+            </div>
+
+            <!-- 蛋糕本體層（點擊整層也可隨機跳轉口味） -->
+            <div onclick="cycleCakeLayerFlavor(${layerIdx})"
+              style="background-color: ${item.bgHex}; border-color: ${item.borderHex};"
+              class="rounded-2xl rounded-tl-none border-2 p-4 sm:px-6 sm:py-4 shadow-sm hover:shadow-md transition cursor-pointer relative overflow-hidden ${isFocused ? 'ring-2 ring-[#A83E28] ring-offset-2 ring-offset-[#F6EFE4]' : ''}">
+              <!-- 頂部奶油波浪裝飾條 -->
+              <div style="background-color: ${item.frostingHex};" class="absolute top-0 left-0 right-0 h-2.5 opacity-90"></div>
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-1">
+                <div>
+                  <div style="color: ${item.textHex};" class="font-black text-base sm:text-lg">
+                    ${item.flavorName}
+                  </div>
+                  <div class="text-xs text-[#6B5A4C] mt-0.5">
+                    點擊此頁籤蛋糕層，立即像切換網頁分頁般隨機換一種口味！
+                  </div>
+                </div>
+                <span style="background-color: ${item.badgeHex};" class="self-start sm:self-center px-3 py-1 rounded-full text-white text-xs font-bold shrink-0">
+                  ${item.brandLabel}
+                </span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // 同步更新上方瀏覽器網址列與直達按鈕
+      const activeItem = CAKE_TAB_FLAVORS[activeCakeLayers[focusedLayerIndex]];
+      const urlEl = document.getElementById('browser-cake-url');
+      const visitBtn = document.getElementById('browser-visit-brand-btn');
+      if (urlEl && activeItem) {
+        urlEl.textContent = activeItem.urlPath;
+      }
+      if (visitBtn && activeItem) {
+        visitBtn.setAttribute('onclick', `openStoreInfoModal('${activeItem.brandId}')`);
+        visitBtn.textContent = `查看 ${activeItem.brandLabel.replace(/^#\d+\s*/, '')} 資訊 →`;
+      }
+    }
+
+    // 點擊單一層蛋糕頁籤：隨機切換不同口味並更新瀏覽器網址列
+    function cycleCakeLayerFlavor(layerIdx) {
+      focusedLayerIndex = layerIdx;
+      const currentFlavor = activeCakeLayers[layerIdx];
+      let nextFlavor = currentFlavor;
+      while (nextFlavor === currentFlavor && CAKE_TAB_FLAVORS.length > 1) {
+        nextFlavor = Math.floor(Math.random() * CAKE_TAB_FLAVORS.length);
+      }
+      activeCakeLayers[layerIdx] = nextFlavor;
+      renderCakeTabLayers();
+      const chosen = CAKE_TAB_FLAVORS[nextFlavor];
+      showToast(`已切換頁籤至「${chosen.tabTitle.replace('.tab', '')}」！`);
+    }
+    window.cycleCakeLayerFlavor = cycleCakeLayerFlavor;
+
+    // 一鍵重新整理三層蛋糕所有頁籤口味
+    function shuffleAllCakeTabs() {
+      const indices = CAKE_TAB_FLAVORS.map((_, i) => i).sort(() => Math.random() - 0.5);
+      activeCakeLayers = [indices[0], indices[1], indices[2]];
+      focusedLayerIndex = 0;
+      renderCakeTabLayers();
+      showToast('已為您重新載入三層全新甜點頁籤！');
+    }
+    window.shuffleAllCakeTabs = shuffleAllCakeTabs;
+
+    // 顯示 Toast 提示（嚴格遵守不使用 alert）
+    function showToast(msg) {
+      const toast = document.getElementById('toast-box');
+      if (!toast) return;
+      toast.textContent = msg;
+      toast.classList.remove('hidden');
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 2800);
+    }
+    window.showToast = showToast;
+
+    // 動態渲染首頁快速膠囊、評論下拉選單與頁尾官網連結（確保新增店家同步連動）
+    function syncDynamicNavigation() {
+      const heroContainer = document.getElementById('hero-quick-brands');
+      if (heroContainer) {
+        heroContainer.innerHTML = BRANDS.map((b, index) => `
+          <button onclick="openStoreInfoModal('${b.id}')" class="group flex items-center justify-between px-4 py-3 rounded-xl bg-white/90 hover:bg-[#2C1810] border border-[#E2DBD0] transition text-left shadow-sm">
+            <div class="flex items-center gap-3 min-w-0">
+              <span class="w-7 h-7 rounded-full ${index === 0 ? 'bg-[#A83E28]' : 'bg-[#2C1810] group-hover:bg-[#A83E28]'} text-white text-xs font-black flex items-center justify-center shrink-0">${b.rank}</span>
+              <div class="truncate">
+                <div class="font-bold text-sm text-[#0B0B0B] group-hover:text-white truncate">${b.name}</div>
+                <div class="text-[11px] text-[#7D7D7D] group-hover:text-[#D5C9BE] truncate">${b.categoryLabel}</div>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-[#A83E28] group-hover:text-white shrink-0 ml-2">查看官網 →</span>
+          </button>
+        `).join('');
+      }
+
+      const allBtn = document.getElementById('filter-all-btn');
+      if (allBtn) {
+        allBtn.textContent = `全部品牌 (${BRANDS.length})`;
+      }
+
+      const reviewSelect = document.getElementById('review-brand-select');
+      if (reviewSelect) {
+        const prevVal = reviewSelect.value;
+        reviewSelect.innerHTML = BRANDS.map(b => `<option value="${b.id}">#${b.rank} ${b.name}</option>`).join('');
+        if (BRANDS.some(b => b.id === prevVal)) {
+          reviewSelect.value = prevVal;
+        }
+      }
+
+      const footerLinks = document.getElementById('footer-brand-links');
+      if (footerLinks) {
+        footerLinks.innerHTML = BRANDS.map((b, idx) => `
+          <a href="${b.url}" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg ${idx === 0 ? 'bg-[#A83E28] hover:bg-[#c24b33]' : 'bg-white/10 hover:bg-white/20'} transition">
+            ${b.rank} ${b.name}官網 ↗
+          </a>
+        `).join('');
+      }
+    }
+
+    // 格式化單一欄位數值（若官網未提供則顯示「待續新增」）
+    function formatFieldVal(val) {
+      if (val && String(val).trim().length > 0) {
+        return `<span class="text-[#5C4B3B]">${val}</span>`;
+      }
+      return `<span class="text-[#A89B8C] italic">待續新增</span>`;
+    }
+
+    // 渲染品牌評比卡片（含直接嵌入的參考圖風格「店家資訊」摘要區塊與「查看官網」按鈕）
+    function renderBrandCards(filter = 'all') {
+      currentFilter = filter;
+      const container = document.getElementById('brand-cards-grid');
+      if (!container) return;
+      const filtered = filter === 'all' ? BRANDS : BRANDS.filter(b => b.category === filter);
+
+      container.innerHTML = filtered.map((b) => `
+        <article class="bg-white/95 rounded-3xl border border-[#E5DFD6] p-6 sm:p-8 choco-shadow flex flex-col justify-between">
+          <div>
+            <!-- 頂部排名、品牌名稱與星等 -->
+            <div class="flex items-start justify-between gap-4 mb-4">
+              <div class="flex items-center gap-3.5">
+                <div class="w-12 h-12 rounded-2xl bg-[#2C1810] text-white font-black text-lg flex items-center justify-center shrink-0">
+                  #${b.rank}
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-[#A83E28]">${b.categoryLabel}</span>
+                  <h3 class="text-xl sm:text-2xl font-black text-[#0B0B0B]">${b.name}</h3>
+                  <p class="text-xs text-[#7D7D7D] font-medium">${b.enName}</p>
+                </div>
+              </div>
+              <div class="text-right shrink-0">
+                <div class="text-lg font-black text-[#EB8323]">★ ${b.rating.toFixed(1)}</div>
+                <div class="text-[11px] text-[#7D7D7D]">編輯實測總評</div>
+              </div>
+            </div>
+
+            <p class="text-sm text-[#4A2C2A] leading-relaxed mb-4">${b.summary}</p>
+
+            <!-- 標籤 -->
+            <div class="flex flex-wrap gap-2 mb-5">
+              ${b.tags.map(t => `<span class="px-3 py-1 rounded-full bg-[#F7F5F2] border border-[#E5DFD6] text-xs font-bold text-[#4A2C2A]">${t}</span>`).join('')}
+            </div>
+
+            <!-- 內嵌「店家資訊」卡片摘要（對齊參考圖風格與「待續新增」規則） -->
+            <div class="rounded-2xl store-card-bg p-4 sm:p-5 mb-5">
+              <div class="flex items-center justify-between mb-3 pb-2 border-b border-[#EAE2D6]">
+                <span class="font-serif-store text-base font-bold text-[#6B4423]">店家資訊</span>
+                <span class="text-[11px] text-[#8C755B]">未提供項目自動標示待續新增</span>
+              </div>
+              <div class="space-y-2 text-xs sm:text-[13px]">
+                <div class="grid grid-cols-12 gap-2">
+                  <span class="col-span-3 font-bold text-[#6B4423]">地址</span>
+                  <div class="col-span-9">${formatFieldVal(b.storeInfo.address)}</div>
+                </div>
+                <div class="grid grid-cols-12 gap-2">
+                  <span class="col-span-3 font-bold text-[#6B4423]">參考消費</span>
+                  <div class="col-span-9">${formatFieldVal(b.storeInfo.priceRange)}</div>
+                </div>
+                <div class="grid grid-cols-12 gap-2">
+                  <span class="col-span-3 font-bold text-[#6B4423]">營業時間</span>
+                  <div class="col-span-9">${formatFieldVal(b.storeInfo.hours)}</div>
+                </div>
+                <div class="grid grid-cols-12 gap-2">
+                  <span class="col-span-3 font-bold text-[#6B4423]">招牌餐點</span>
+                  <div class="col-span-9">${formatFieldVal(b.storeInfo.signature)}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 底部操作列 -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <button onclick="openStoreInfoModal('${b.id}')" class="flex-1 py-3 px-5 rounded-xl bg-[#2C1810] hover:bg-[#A83E28] text-white text-xs sm:text-sm font-bold transition shadow-xs cursor-pointer">
+              查看官網與完整店家資訊
+            </button>
+            <a href="${b.url}" target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-xl bg-[#F4EDE1] hover:bg-[#EAE0CE] border border-[#D4C5B0] text-[#6B4423] text-xs sm:text-sm font-bold transition">
+              原網址 ↗
+            </a>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function filterBrands(filter) {
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        if (btn.dataset.filter === filter) {
+          btn.classList.remove('bg-white', 'text-[#4A2C2A]', 'border', 'border-[#E2DBD0]');
+          btn.classList.add('bg-[#2C1810]', 'text-white');
+        } else {
+          btn.classList.remove('bg-[#2C1810]', 'text-white');
+          btn.classList.add('bg-white', 'text-[#4A2C2A]', 'border', 'border-[#E2DBD0]');
+        }
+      });
+      renderBrandCards(filter);
+    }
+    window.filterBrands = filterBrands;
+
+    // 渲染橫向規格對決表
+    function renderCompareTable() {
+      const tbody = document.getElementById('compare-table-body');
+      if (!tbody) return;
+      tbody.innerHTML = BRANDS.map(b => `
+        <tr class="hover:bg-[#FBF8F3] transition">
+          <td class="py-4 px-4 font-bold text-[#0B0B0B]">
+            <span class="inline-block w-6 h-6 rounded-full bg-[#2C1810] text-white text-xs text-center leading-6 mr-2">${b.rank}</span>
+            ${b.name}
+          </td>
+          <td class="py-4 px-4 text-[#4A2C2A] font-medium">${b.categoryLabel}</td>
+          <td class="py-4 px-4 text-[#5E5A54]">${b.storeInfo.signature ? b.storeInfo.signature.split('、')[0] : '<span class="text-[#A89B8C] italic">待續新增</span>'}</td>
+          <td class="py-4 px-4 text-[#7A6248] font-medium">${b.storeInfo.priceRange ? b.storeInfo.priceRange.split('（')[0] : '<span class="text-[#A89B8C] italic">待續新增</span>'}</td>
+          <td class="py-4 px-4 font-black text-[#EB8323]">★ ${b.rating.toFixed(1)}</td>
+          <td class="py-4 px-4 text-right space-x-2">
+            <button onclick="openStoreInfoModal('${b.id}')" class="px-3.5 py-1.5 rounded-lg bg-[#EB8323] hover:bg-[#d67115] text-white text-xs font-bold transition cursor-pointer">
+              查看官網
+            </button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    // 30 秒推薦器
+    function recommendBrand(brandId) {
+      const b = BRANDS.find(item => item.id === brandId) || BRANDS[0];
+      const pickerSection = document.getElementById('picker');
+      if (!pickerSection) return;
+      const grid = pickerSection.querySelector('.grid');
+      if (!grid) return;
+
+      let resultCard = document.getElementById('picker-result-card');
+      if (!resultCard) {
+        resultCard = document.createElement('div');
+        resultCard.id = 'picker-result-card';
+        resultCard.className = 'lg:col-span-6 rounded-2xl store-card-bg text-[#0B0B0B] p-6 sm:p-7 shadow-xl';
+        grid.appendChild(resultCard);
+      }
+
+      resultCard.innerHTML = `
+        <div class="flex items-center justify-between gap-2 mb-3">
+          <span class="text-xs font-bold px-3 py-1 rounded-full bg-[#A83E28] text-white">最佳配對推薦 · #${b.rank}</span>
+          <span class="text-sm font-black text-[#EB8323]">★ ${b.rating.toFixed(1)}</span>
+        </div>
+        <h3 class="text-2xl font-black text-[#0B0B0B] mb-1">${b.name}</h3>
+        <p class="text-xs text-[#7D7D7D] mb-3">${b.enName} · ${b.categoryLabel}</p>
+        <p class="text-sm text-[#4A2C2A] leading-relaxed mb-4">${b.summary}</p>
+        <div class="p-3.5 rounded-xl bg-white border border-[#E5DFD6] text-xs space-y-1.5 mb-5">
+          <div><strong class="text-[#6B4423]">招牌必點：</strong>${b.storeInfo.signature || '<span class="text-[#A89B8C] italic">待續新增</span>'}</div>
+          <div><strong class="text-[#6B4423]">門市地址：</strong>${b.storeInfo.address || '<span class="text-[#A89B8C] italic">待續新增</span>'}</div>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <button onclick="openStoreInfoModal('${b.id}')" class="flex-1 py-2.5 px-4 rounded-xl bg-[#2C1810] hover:bg-[#A83E28] text-white text-xs sm:text-sm font-bold transition cursor-pointer">
+            查看官網
+          </button>
+          <a href="${b.url}" target="_blank" rel="noopener noreferrer" class="py-2.5 px-4 rounded-xl border border-[#2C1810] text-[#2C1810] hover:bg-[#2C1810] hover:text-white text-xs sm:text-sm font-bold transition">
+            外部原網址 ↗
+          </a>
+        </div>
+      `;
+    }
+    window.recommendBrand = recommendBrand;
+
+    // 渲染食客真實評價牆
+    function renderReviews() {
+      const list = document.getElementById('reviews-list');
+      const badge = document.getElementById('review-count-badge');
+      if (badge) badge.textContent = `共 ${reviewsData.length} 則精選評論`;
+      if (!list) return;
+
+      list.innerHTML = reviewsData.map(r => `
+        <div class="bg-white/95 rounded-2xl border border-[#E5DFD6] p-5 sm:p-6 shadow-xs">
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <div class="flex items-center gap-2.5">
+              <span class="px-2.5 py-0.5 rounded-full bg-[#F4EDE1] text-[#6B4423] text-xs font-bold">${r.brandName}</span>
+              <span class="font-bold text-sm text-[#0B0B0B]">${r.author}</span>
+            </div>
+            <div class="text-xs font-bold text-[#EB8323]">★ ${Number(r.rating).toFixed(1)} <span class="text-[#9E8E82] font-normal ml-1">${r.date}</span></div>
+          </div>
+          <p class="text-sm text-[#4A2C2A] leading-relaxed">${r.content}</p>
+        </div>
+      `).join('');
+    }
+
+    function submitReview(e) {
+      e.preventDefault();
+      const brandId = document.getElementById('review-brand-select').value;
+      const author = document.getElementById('review-author').value.trim();
+      const rating = parseFloat(document.getElementById('review-rating').value);
+      const content = document.getElementById('review-content').value.trim();
+      const brand = BRANDS.find(b => b.id === brandId);
+      if (!brand || !author || !content) return;
+
+      const today = new Date().toISOString().split('T')[0];
+      reviewsData.unshift({
+        brandId,
+        brandName: brand.name,
+        author,
+        rating,
+        date: today,
+        content
+      });
+
+      document.getElementById('review-form').reset();
+      renderReviews();
+      showToast(`感謝 ${author}！已成功發布對「${brand.name}」的評價`);
+    }
+    window.submitReview = submitReview;
+
+    // 開啟與關閉「店家資訊」視窗（100% 還原參考圖 6 大欄位與待續新增規則）
+    function openStoreInfoModal(brandId) {
+      const b = BRANDS.find(item => item.id === brandId);
+      if (!b) return;
+      activeModalBrandId = brandId;
+
+      const badge = document.getElementById('modal-brand-badge');
+      const officialLink = document.getElementById('modal-official-url');
+      const rowsContainer = document.getElementById('modal-info-rows');
+      const gmapBtn = document.getElementById('modal-gmap-btn');
+      const bookmarkBtn = document.getElementById('modal-bookmark-btn');
+
+      if (badge) badge.textContent = `#${b.rank} ${b.name}`;
+      if (officialLink) officialLink.href = b.url;
+
+      const fields = [
+        { label: '地址', value: b.storeInfo.address },
+        { label: '參考消費', value: b.storeInfo.priceRange },
+        { label: '步行時間', value: b.storeInfo.walkTime },
+        { label: '營業時間', value: b.storeInfo.hours },
+        { label: '出餐速度', value: b.storeInfo.servingSpeed },
+        { label: '招牌餐點', value: b.storeInfo.signature }
+      ];
+
+      if (rowsContainer) {
+        rowsContainer.innerHTML = fields.map(f => `
+          <div class="grid grid-cols-12 gap-3 items-baseline">
+            <div class="col-span-3 sm:col-span-3 font-bold text-[#6B4423] tracking-wide">${f.label}</div>
+            <div class="col-span-9 sm:col-span-9">${formatFieldVal(f.value)}</div>
+          </div>
+        `).join('');
+      }
+
+      if (gmapBtn) {
+        const query = encodeURIComponent(b.storeInfo.mapQuery || b.storeInfo.address || b.name);
+        gmapBtn.href = `https://www.google.com/maps/search/?api=1&query=${query}`;
+      }
+
+      if (bookmarkBtn) {
+        bookmarkBtn.textContent = bookmarkedIds.has(brandId) ? '★ 已收藏店家' : '收藏店家';
+      }
+
+      const modal = document.getElementById('store-info-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    }
+    window.openStoreInfoModal = openStoreInfoModal;
+
+    function closeStoreInfoModal() {
+      const modal = document.getElementById('store-info-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+    window.closeStoreInfoModal = closeStoreInfoModal;
+
+    function toggleBookmarkStore() {
+      const b = BRANDS.find(item => item.id === activeModalBrandId);
+      const btn = document.getElementById('modal-bookmark-btn');
+      if (!b || !btn) return;
+
+      if (bookmarkedIds.has(b.id)) {
+        bookmarkedIds.delete(b.id);
+        btn.textContent = '收藏店家';
+        showToast(`已取消收藏「${b.name}」`);
+      } else {
+        bookmarkedIds.add(b.id);
+        btn.textContent = '★ 已收藏店家';
+        showToast(`已將「${b.name}」加入收藏清單`);
+      }
+    }
+    window.toggleBookmarkStore = toggleBookmarkStore;
+
+    function jumpToReviewFromModal() {
+      const brandId = activeModalBrandId;
+      closeStoreInfoModal();
+      const select = document.getElementById('review-brand-select');
+      if (select) select.value = brandId;
+      document.getElementById('reviews').scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => document.getElementById('review-author').focus(), 400);
+    }
+    window.jumpToReviewFromModal = jumpToReviewFromModal;
+
+    // 開啟與關閉「新增店家」彈窗
+    function openAddStoreModal() {
+      const modal = document.getElementById('add-store-modal');
+      if (!modal) return;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      setTimeout(() => {
+        const input = document.getElementById('new-store-name');
+        if (input) input.focus();
+      }, 100);
+    }
+    window.openAddStoreModal = openAddStoreModal;
+
+    function closeAddStoreModal() {
+      const modal = document.getElementById('add-store-modal');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+    window.closeAddStoreModal = closeAddStoreModal;
+
+    // 填入測試範例按鈕
+    function fillSampleCakeStore() {
+      const nameInput = document.getElementById('new-store-name');
+      const urlInput = document.getElementById('new-store-url');
+      const rawInput = document.getElementById('new-store-raw-text');
+      if (nameInput) nameInput.value = '法朋烘焙甜點坊 Le Ruban Pâtisserie';
+      if (urlInput) urlInput.value = 'https://lerubanpatisserie.com/';
+      if (rawInput) {
+        rawInput.value = '地址：台北市大安區仁愛路四段300巷20弄11號\n營業時間：週一至週日 11:30-19:30\n參考消費：NT$180 – NT$1,480\n招牌蛋糕：老奶奶檸檬蛋糕、草莓純生鮮奶油蛋糕、22階法式千層';
+      }
+      showToast('已填入測試範例，可直接點擊「AI 自動整理並加入店家」');
+    }
+    window.fillSampleCakeStore = fillSampleCakeStore;
+
+    // 智慧解析貼上文字，並帶入 1.店名 2.網址或社群 3.補充簡介資訊
+    function parseRawCakeInfo(rawText) {
+      const text = (rawText || '').trim();
+      if (!text) {
+        return {
+          summary: '新收錄精選蛋糕品牌，點擊「查看官網與完整店家資訊」可檢視詳細門市與商品資料。',
+          address: '',
+          priceRange: '',
+          walkTime: '',
+          hours: '',
+          servingSpeed: '',
+          signature: '',
+          category: 'custom',
+          categoryLabel: '新收錄品牌 · 精選蛋糕'
+        };
+      }
+
+      const addrMatch = text.match(/(?:地址|門市)[：:\s]*([^\n]+)/i) || text.match(/((?:台北|新北|桃園|台中|台南|高雄|新竹|基隆|宜蘭|苗栗|彰化|南投|雲林|嘉義|屏東|花蓮|台東)[市縣][^\n]+)/);
+      const priceMatch = text.match(/(?:參考消費|價位|價格|消費)[：:\s]*([^\n]+)/i) || text.match(/(NT\$?\s*\d+[\s\-~～to]*(?:NT\$?\s*\d+)?[^\n]*)/i);
+      const hoursMatch = text.match(/(?:營業時間|時間|營業)[：:\s]*([^\n]+)/i) || text.match(/((?:週[一二三四五六日天]|禮拜[一二三四五六日天]|\d{1,2}:\d{2})[^\n]*)/);
+      const walkMatch = text.match(/(?:步行時間|步行)[：:\s]*([^\n]+)/i);
+      const speedMatch = text.match(/(?:出餐速度|出餐)[：:\s]*([^\n]+)/i);
+      const sigMatch = text.match(/(?:招牌餐點|招牌蛋糕|招牌|推薦|必點)[：:\s]*([^\n]+)/i);
+
+      let category = 'custom';
+      let categoryLabel = '新收錄品牌 · 精選蛋糕';
+      if (/法式|千層|塔|可可|巧克力|蒙布朗/.test(text)) {
+        category = 'french';
+        categoryLabel = '新收錄品牌 · 法式精品甜點';
+      } else if (/生乳捲|鮮奶油|蜂蜜|彌月|老字號|黑森林/.test(text)) {
+        category = 'classic';
+        categoryLabel = '新收錄品牌 · 經典鮮奶油';
+      }
+
+      const cleanSummary = text.replace(/\n+/g, ' ').slice(0, 95) + (text.length > 95 ? '...' : '');
+
+      return {
+        summary: cleanSummary,
+        address: addrMatch ? addrMatch[1].trim() : '',
+        priceRange: priceMatch ? priceMatch[1].trim() : '',
+        walkTime: walkMatch ? walkMatch[1].trim() : '',
+        hours: hoursMatch ? hoursMatch[1].trim() : '',
+        servingSpeed: speedMatch ? speedMatch[1].trim() : '',
+        signature: sigMatch ? sigMatch[1].trim() : '',
+        category,
+        categoryLabel
+      };
+    }
+
+    // 送出新增店家表單：完整帶入 1.店名 2.網址或社群 3.簡介解析欄位
+    function handleAddStoreSubmit(e) {
+      e.preventDefault();
+      const nameVal = document.getElementById('new-store-name').value.trim();
+      const urlVal = document.getElementById('new-store-url').value.trim();
+      const rawVal = document.getElementById('new-store-raw-text').value.trim();
+
+      if (!nameVal || !urlVal) {
+        showToast('請完整填寫「1. 蛋糕店名稱」與「2. 網址或社群」');
+        return;
+      }
+
+      const parsed = parseRawCakeInfo(rawVal);
+      const nextRank = String(BRANDS.length + 1).padStart(2, '0');
+      const newId = 'store_' + Date.now();
+
+      const newBrand = {
+        id: newId,
+        rank: nextRank,
+        name: nameVal,
+        enName: urlVal.replace(/^https?:\/\/(www\.)?/, '').split('/')[0],
+        category: parsed.category,
+        categoryLabel: parsed.categoryLabel,
+        url: urlVal,
+        rating: 4.8,
+        summary: parsed.summary,
+        tags: ['新收錄店家', '官網/社群直達', '實測建檔'],
+        scores: { aesthetic: 92, cream: 92, cp: 90 },
+        storeInfo: {
+          address: parsed.address,
+          priceRange: parsed.priceRange,
+          walkTime: parsed.walkTime,
+          hours: parsed.hours,
+          servingSpeed: parsed.servingSpeed,
+          signature: parsed.signature,
+          mapQuery: parsed.address ? `${parsed.address} ${nameVal}` : nameVal
+        }
+      };
+
+      BRANDS.push(newBrand);
+
+      // 重設表單並關閉新增視窗
+      document.getElementById('add-store-form').reset();
+      closeAddStoreModal();
+
+      // 同步刷新全站所有列表與推薦器
+      syncDynamicNavigation();
+      filterBrands('all');
+      renderCompareTable();
+      recommendBrand(newId);
+
+      showToast(`已成功新增「#${nextRank} ${nameVal}」！`);
+      // 自動開啟該新店家的「店家資訊」視窗供立即確認
+      setTimeout(() => openStoreInfoModal(newId), 350);
+    }
+    window.handleAddStoreSubmit = handleAddStoreSubmit;
+
+    // 咖啡廳背景輕音樂開關（Web Audio API）
+    let audioCtx = null;
+    let isAudioPlaying = false;
+    let chordTimer = null;
+
+    function toggleCafeAudio() {
+      const iconOff = document.getElementById('icon-sound-off');
+      const iconOn = document.getElementById('icon-sound-on');
+      if (!isAudioPlaying) {
+        try {
+          audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+          if (audioCtx.state === 'suspended') audioCtx.resume();
+          const chords = [
+            [261.63, 329.63, 392.00, 493.88],
+            [220.00, 261.63, 329.63, 392.00],
+            [174.61, 220.00, 261.63, 349.23],
+            [196.00, 246.94, 293.66, 392.00]
+          ];
+          let step = 0;
+          const playChord = () => {
+            if (!isAudioPlaying || !audioCtx) return;
+            const now = audioCtx.currentTime;
+            chords[step % chords.length].forEach((freq, idx) => {
+              const osc = audioCtx.createOscillator();
+              const gain = audioCtx.createGain();
+              osc.type = 'sine';
+              osc.frequency.setValueAtTime(freq, now + idx * 0.08);
+              gain.gain.setValueAtTime(0.0001, now + idx * 0.08);
+              gain.gain.exponentialRampToValueAtTime(0.018, now + idx * 0.08 + 0.15);
+              gain.gain.exponentialRampToValueAtTime(0.0001, now + idx * 0.08 + 2.2);
+              osc.connect(gain);
+              gain.connect(audioCtx.destination);
+              osc.start(now + idx * 0.08);
+              osc.stop(now + idx * 0.08 + 2.3);
+            });
+            step++;
+          };
+          isAudioPlaying = true;
+          playChord();
+          chordTimer = setInterval(playChord, 2600);
+          if (iconOff) iconOff.classList.add('hidden');
+          if (iconOn) iconOn.classList.remove('hidden');
+          showToast('已開啟咖啡廳鋼琴背景輕音樂');
+        } catch (err) {
+          showToast('瀏覽器不支援背景音效播放');
+        }
+      } else {
+        isAudioPlaying = false;
+        clearInterval(chordTimer);
+        if (iconOff) iconOff.classList.remove('hidden');
+        if (iconOn) iconOn.classList.add('hidden');
+        showToast('已關閉背景輕音樂');
+      }
+    }
+    window.toggleCafeAudio = toggleCafeAudio;
+
+    // 頁面載入完成後初始化所有區塊
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCakeTabLayers();
+      syncDynamicNavigation();
+      renderBrandCards('all');
+      renderCompareTable();
+      recommendBrand('echapper');
+      renderReviews();
+    });
+  </script>
+</body>
+</html>
